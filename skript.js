@@ -14,7 +14,6 @@ function calc() {
             price = parseInt(count) * price;
             document.getElementById('result').innerHTML = "Стоимость равна: "+ price +" р.";}
         else if(form.elements["toward"].value=="45"){
-            alert("HUI")
             document.getElementById("selection").style.display="block";
             document.getElementById("chec").style.display="none";
             price += parseInt(type_pie.options[type_pie.selectedIndex].value);
