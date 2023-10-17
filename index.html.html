@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="skript.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator 3000</title>
+</head>
+<body>
+    <div class="size_div" onchange="calc()">
+        <section id ="calculator" div class="calculator" >
+            Укажите количество: <input type="text" id="count" value="0" onchange="calc()" />
+            <div class="toward" id="toward"  >
+                Выберете вид товара:
+                <br>
+                <form id="radios">
+                    <label><input type="radio" name="toward" value="125" checked>Улитка с корицей</label>
+                    <label><input type="radio" name="toward" value="45">Пирожок</label>
+                    <label><input type="radio" name="toward" value="100">Пончик</label>
+                </form>
+            </div><br/>
+            
+            <div class="selection" id="selection">
+                Выберете начинку: 
+                <select onchange="calc()" id="type_pie">
+                    <option value="0">С клубникой</option>
+                    <option value="10">С курицей</option>
+                    <option value="15">С курицей и сыром</option>
+                </select><br/>
+            </div>
+    
+            <div class="chec" id="chec">
+                <input type="checkbox" id="glaze" value="25"> С глазурью
+            </div>
+    
+            <button onclick="calc()">Рассчитать стоимость</button>
+            <div id="result"></div>
+        </section>
+    </div>
+</body>
+</html>
