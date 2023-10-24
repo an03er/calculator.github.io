@@ -8,23 +8,16 @@ function calc() {
     else{
         var price = 0;
         if (form.elements["toward"].value=="125"){
-            document.getElementById("selection").style.display="none";
-            document.getElementById("chec").style.display="none";
             price += parseInt(form.elements["toward"].value);
             price = parseInt(count) * price;
             document.getElementById('result').innerHTML = "Стоимость равна: "+ price +" р.";}
         else if(form.elements["toward"].value=="45"){
-            alert("HUI")
-            document.getElementById("selection").style.display="block";
-            document.getElementById("chec").style.display="none";
             price += parseInt(form.elements["toward"].value);
             price += parseInt(type_pie.options[type_pie.selectedIndex].value);
             price = parseInt(count) * price;
             document.getElementById('result').innerHTML = "Стоимость равна: "+ price +" р.";
         }
         else if(form.elements["toward"].value=="100"){
-            document.getElementById("selection").style.display="none";
-            document.getElementById("chec").style.display="block";
             price += parseInt(form.elements["toward"].value);
             price = parseInt(count) * price;
             if(chek.checked){price+=25;}
@@ -32,4 +25,24 @@ function calc() {
     }
 }
 
-window.addEventListener('click', calc);
+function view(event){
+    var type_pie = document.getElementById("type_pie");
+    let chek = document.querySelector('#glaze');
+    const form = document.getElementById("radios");
+    if (form.elements["toward"].value=="125"){
+        document.getElementById("selection").style.display="none";
+        document.getElementById("chec").style.display="none";
+    }
+    else if(form.elements["toward"].value=="45"){
+        document.getElementById("selection").style.display="block";
+        document.getElementById("chec").style.display="none";
+    }
+    else if(form.elements["toward"].value=="100"){
+        document.getElementById("selection").style.display="none";
+        document.getElementById("chec").style.display="block";
+    }
+}
+
+radios.addEventListener('change', view)
+    
+but.addEventListener('click', calc);
