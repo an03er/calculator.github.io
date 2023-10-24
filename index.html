@@ -8,10 +8,10 @@
     <title>Calculator 3000</title>
 </head>
 <body>
-    <div class="size_div" onchange="calc()">
+    <div class="size_div">
         <section id ="calculator" div class="calculator" >
-            Укажите количество: <input type="text" id="count" value="0" onchange="calc()" />
-            <div class="toward" id="toward"  >
+            Укажите количество: <input type="text" id="count" value="0">
+            <div class="toward" id="toward" >
                 Выберете вид товара:
                 <br>
                 <form id="radios">
@@ -23,7 +23,7 @@
             
             <div class="selection" id="selection">
                 Выберете начинку: 
-                <select onchange="calc()" id="type_pie">
+                <select id="type_pie">
                     <option value="0">С клубникой</option>
                     <option value="10">С курицей</option>
                     <option value="15">С курицей и сыром</option>
@@ -34,7 +34,7 @@
                 <input type="checkbox" id="glaze" value="25"> С глазурью
             </div>
     
-            <button onclick="calc()">Рассчитать стоимость</button>
+            <button>Рассчитать стоимость</button>
             <div id="result"></div>
         </section>
     </div>
