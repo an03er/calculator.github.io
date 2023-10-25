@@ -1,6 +1,7 @@
 function calc() {
     var type_pie = document.getElementById("type_pie");
     var count = document.getElementById("count").value;
+    if (isNaN(count)) {alert("Некорректное значение");return false;}
     let chek = document.querySelector('#glaze');
     const form = document.getElementById("radios");
     if(count==""){alert("Вы не указали количество");}
