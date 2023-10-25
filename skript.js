@@ -44,6 +44,7 @@ function view(event){
     }
 }
 
-radios.addEventListener('change', view)
-    
-but.addEventListener('click', calc);
+document.addEventListener("DOMContentLoaded", function(){
+    radios.addEventListener('change', view);
+    but.addEventListener('click', calc);
+});
